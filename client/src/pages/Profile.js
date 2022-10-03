@@ -53,7 +53,7 @@ const Profile = (props) => {
         <h2 className="bg-dark text-secondary p-3 display-inline-block">
           Viewing {userParam ? `${user.username}'s` : 'your'} profile.
         </h2>
-        {userParam && (
+        {userParam && Auth.loggedIn() && (
           <button className="btn ml-auto" onClick={handleClick}>
             Add Friend
           </button>
